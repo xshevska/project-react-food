@@ -1,6 +1,6 @@
 function Header() {
     return (
-        <nav className = "blue accent-3">
+        <nav className = "amber accent-4">
             <div className = "nav-wrapper">
                 <a href = "#" className = "brand-logo">
                     React Shop
