@@ -9,9 +9,10 @@ import {NotFound} from "./pages/NotFound"
 
 function App() {
     return <>
-        <Header/>
-        <main className = "container content">
-            <Router>
+        <Router>
+            <Header/>
+            <main className = "container content">
+
                 <Switch>
                     {/*exact path*/}
                     <Route exact path = "/" component = {Home}/>
@@ -20,11 +21,9 @@ function App() {
                     <Route component = {NotFound}/>
                 </Switch>
 
-
-            </Router>
-        </main>
-
-        <Footer/>
+            </main>
+            <Footer/>
+        </Router>
     </>;
 }
 
