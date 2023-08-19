@@ -1,14 +1,13 @@
-import { CategoryItem } from './CategoryItem';
+import {CategoryItem} from './CategoryItem';
 
-//принимает каталог со значением по умолчанию
-function CategoryList({ catalog = [] }) {
+function CategoryList({catalog = []}) {
     return (
-        <div className='list'>
+        <div className = "list">
             {catalog.map((el) => (
-                <CategoryItem key={el.idCategory} {...el} />
+                <CategoryItem key = {el.idCategory} {...el} />
             ))}
         </div>
     );
 }
 
-export { CategoryList };
+export {CategoryList};

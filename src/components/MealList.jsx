@@ -1,12 +1,13 @@
-import { Meal } from './Meal';
+import {Meal} from './Meal';
 
-function MealList({ meals }) {
+function MealList({meals}) {
     return (
-        <div className='list'>
+        <div className = "list">
             {meals.map((meal) => (
-                <Meal key={meal.idMeal} {...meal} />
+                <Meal key = {meal.idMeal} {...meal} />
             ))}
         </div>
     );
 }
-export { MealList };
+
+export {MealList};

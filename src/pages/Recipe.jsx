@@ -34,9 +34,7 @@ function Recipe() {
                         </thead>
 
                         <tbody>
-                        {/*проходим по всем ключам*/}
                         {Object.keys(recipe).map((key) => {
-                            // recipe[key] если не пустой, так как может приходить пустой массив
                             if (key.includes('Ingredient') && recipe[key]) {
                                 console.log("This is ", key)
                                 return (
@@ -54,7 +52,6 @@ function Recipe() {
                                     </tr>
                                 );
                             }
-                            //если не пришел ингридиент, тогда верни null
                             return null;
                         })}
                         </tbody>
@@ -69,7 +66,6 @@ function Recipe() {
 
                             <iframe
                                 title = {id}
-                                // вырезаем последние 11 символов из ссылки
                                 src = {`https://www.youtube.com/embed/${recipe.strYoutube.slice(
                                     -11
                                 )}`}
