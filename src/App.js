@@ -6,6 +6,7 @@ import {About} from "./pages/About"
 import {Home} from "./pages/Home"
 import {Contact} from "./pages/Contact"
 import {NotFound} from "./pages/NotFound"
+import {Recipe} from "./pages/Recipe";
 import {Category} from "./pages/Category";
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
                     <Route path = "/about" component = {About}/>
                     <Route path = "/contacts" component = {Contact}/>
                     <Route path='/category/:name' component={Category} />
+                    <Route path='/meal/:id' component={Recipe} />
                     <Route component = {NotFound}/>
                 </Switch>
 
