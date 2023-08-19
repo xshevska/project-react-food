@@ -1,14 +1,15 @@
+import {getFilteredCategory} from '../api';
+import {useState, useEffect} from 'react';
+import {useParams, useHistory} from 'react-router-dom';
 
-import { getFilteredCategory } from '../api';
-import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
 
-import { Preloader } from '../components/Preloader';
-import { MealList } from '../components/MealList';
+import {Preloader} from '../components/Preloader';
+import {MealList} from '../components/MealList';
 
 function Category() {
-    const { name } = useParams();
+    const {name} = useParams();
     const [meals, setMeals] = useState([]);
+    const { goBack } = useHistory();
 
 
     useEffect(() => {
@@ -17,9 +18,12 @@ function Category() {
 
     return (
         <>
-            {!meals.length ? <Preloader /> : <MealList meals={meals} />}
+            <button className = "btn" onClick = {goBack}>
+                Go Back
+            </button>
+            {!meals.length ? <Preloader/> : <MealList meals = {meals}/>}
         </>
     );
 }
 
-export { Category };
+export {Category};

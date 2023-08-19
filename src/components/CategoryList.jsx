@@ -1,6 +1,6 @@
 import { CategoryItem } from './CategoryItem';
 
-//принимает каталог со значение по умолчанию
+//принимает каталог со значением по умолчанию
 function CategoryList({ catalog = [] }) {
     return (
         <div className='list'>

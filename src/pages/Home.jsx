@@ -1,8 +1,8 @@
-import { useState, useEffect } from 'react';
-import { getAllCategories } from '../api';
+import {useState, useEffect} from 'react';
+import {getAllCategories} from '../api';
 
-import { Preloader } from '../components/Preloader';
-import { CategoryList } from '../components/CategoryList';
+import {Preloader} from '../components/Preloader';
+import {CategoryList} from '../components/CategoryList';
 
 
 function Home() {
@@ -13,20 +13,19 @@ function Home() {
         //возвращает промис с конкретными данными
         getAllCategories().then((data) => {
             setCatalog(data.categories);
-
         });
     }, []);
-
 
 
     return (
         <>
             {!catalog.length ? (
-                <Preloader />
+                <Preloader/>
             ) : (
-                <CategoryList catalog={catalog} />
+                <CategoryList catalog = {catalog}/>
             )}
         </>
     );
 }
-export { Home };
+
+export {Home};

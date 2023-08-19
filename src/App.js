@@ -13,7 +13,6 @@ function App() {
         <Router>
             <Header/>
             <main className = "container content">
-
                 <Switch>
                     {/*exact path*/}
                     <Route exact path = "/">
